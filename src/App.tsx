@@ -11,16 +11,12 @@ function App() {
         }}
       >
         <Stack hideBelow="lg">
-          <GridItem area="aside" bg="orange">
-            Aside
-          </GridItem>
+          <GridItem area="aside">Aside</GridItem>
         </Stack>
         <GridItem area="nav">
           <NavBar />
         </GridItem>
-        <GridItem area="main" bg=" blue">
-          Main
-        </GridItem>
+        <GridItem area="main">Main</GridItem>
       </Grid>
     </>
   );
