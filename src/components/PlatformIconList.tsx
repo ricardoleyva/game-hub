@@ -6,11 +6,10 @@ import {
   FaLinux,
   FaAndroid,
 } from "react-icons/fa";
-import { SiNintendo } from "react-icons/si";
 import { MdPhoneIphone } from "react-icons/md";
-import { BsGlobe } from "react-icons/bs";
+import { BsGlobe, BsNintendoSwitch } from "react-icons/bs";
 import { Platform } from "@/hooks/useGames";
-import { HStack, IconButton } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 
 interface Props {
@@ -25,7 +24,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     mac: FaApple,
     linux: FaLinux,
     android: FaAndroid,
-    nintendo: SiNintendo,
+    nintendo: BsNintendoSwitch,
     ios: MdPhoneIphone,
     web: BsGlobe,
   };
@@ -35,9 +34,12 @@ const PlatformIconList = ({ platforms }: Props) => {
         <IconButton
           as={iconMap[platform.slug]}
           key={platform.slug}
-          size="xs"
           variant="ghost"
-          mr="2"
+          size="xs"
+          height="20px"
+          mr="1"
+          color="gray.500"
+          marginY="1"
         />
       ))}
     </>
