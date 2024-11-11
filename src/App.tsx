@@ -11,9 +11,13 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav" "aside main"`, //1024 px
         }}
+        templateColumns={{
+          base: "1fr",
+          lg: "150px 1fr", //1024 px
+        }}
       >
         <Stack hideBelow="lg">
-          <GridItem area="aside">
+          <GridItem area="aside" paddingX={5}>
             <GenreList />
           </GridItem>
         </Stack>

@@ -19,7 +19,9 @@ const GameCard = ({ game }: Props) => {
         fit="cover"
       />
       <Card.Body>
-        <Card.Title mb="1">{game.name}</Card.Title>
+        <Card.Title mb="1" textAlign="center">
+          {game.name}
+        </Card.Title>
         <Card.Description>
           {/* {game.released}
           <br /> */}
