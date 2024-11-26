@@ -23,7 +23,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
           {selectedPlatform?.name || "Platforms"} <BsChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent position="absolute" top="140px">
+      <MenuContent position="absolute">
         {data.map((p) => (
           <MenuItem
             onClick={() => onSelectPlatform(p)}

@@ -31,7 +31,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
           Order by: {currentSortOrder?.label || "Relevance"} <BsChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent position="absolute" top="140px">
+      <MenuContent position="absolute">
         {sortOrders.map((order) => (
           <MenuItem
             onClick={() => onSelectSortOrder(order.value)}
