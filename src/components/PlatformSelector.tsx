@@ -17,20 +17,20 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
   const { data, error } = usePlatforms();
   if (error) return null;
   return (
-    <MenuRoot>
+    <MenuRoot positioning={{ placement: "bottom-start" }}>
       <MenuTrigger asChild>
         <Button>
           {selectedPlatform?.name || "Platforms"} <BsChevronDown />
         </Button>
       </MenuTrigger>
-      <MenuContent width="150px" position="fixed" top="140px">
+      <MenuContent position="absolute" top="140px">
         {data.map((p) => (
           <MenuItem
             onClick={() => onSelectPlatform(p)}
             key={p.id}
             value={p.name}
           >
-            {p.name} ID: {p.id}
+            {p.name}
           </MenuItem>
         ))}
       </MenuContent>
