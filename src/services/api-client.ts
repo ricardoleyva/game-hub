@@ -1,8 +1,8 @@
 import axios from "axios";
-
+const api_key: string | undefined = process.env.REACT_APP_RAWG_IO_API;
 export default axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "f62c4f8166c546bd8b1ca177d6aeeae8",
+    key: api_key,
   },
 });
