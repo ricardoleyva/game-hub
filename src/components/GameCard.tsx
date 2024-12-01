@@ -1,5 +1,5 @@
 import { Game } from "@/hooks/useGames";
-import { Card, Image } from "@chakra-ui/react";
+import { Card, HStack, Image } from "@chakra-ui/react";
 import { Rating } from "./ui/rating";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
@@ -19,17 +19,17 @@ const GameCard = ({ game }: Props) => {
         fit="cover"
       />
       <Card.Body>
-        <Card.Title mb="1" textAlign="center">
-          {game.name}
-        </Card.Title>
-        <Card.Description>
-          {/* {game.released}
+        {/* {game.released}
           <br /> */}
+        <HStack justifyContent="space-between" overflow="auto">
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           />
-        </Card.Description>
+        </HStack>
       </Card.Body>
+      <Card.Title mb="1" textAlign="center">
+        {game.name}
+      </Card.Title>
       <Card.Footer justifyContent="space-between">
         <Rating readOnly defaultValue={game.rating} size="lg" marginY={4} />
         <CriticScore score={game.metacritic} />
