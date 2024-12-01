@@ -37,7 +37,7 @@ const PlatformIconList = ({ platforms }: Props) => {
           variant="ghost"
           size="xs"
           height="20px"
-          mr="1"
+          mr="-2.5"
           color="gray.500"
           marginY="1"
         />
