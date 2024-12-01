@@ -4,6 +4,7 @@ import { Rating } from "./ui/rating";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "@/services/image-url";
+import Emoji from "./Emoji";
 
 interface Props {
   game: Game;
@@ -30,9 +31,10 @@ const GameCard = ({ game }: Props) => {
       <Card.Title mb="1" textAlign="center">
         {game.name}
       </Card.Title>
-      <Card.Footer justifyContent="space-between">
+      <Card.Footer justifyContent="space-between" marginLeft={-2.5}>
         <Rating readOnly defaultValue={game.rating} size="lg" marginY={4} />
         <CriticScore score={game.metacritic} />
+        <Emoji rating={game.rating_top} />
       </Card.Footer>
     </Card.Root>
   );
